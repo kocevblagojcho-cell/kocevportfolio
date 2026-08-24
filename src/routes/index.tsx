@@ -3,6 +3,8 @@ import { useState, type FormEvent } from "react";
 import projectEcommerce from "@/assets/project-ecommerce.png";
 import projectTodo from "@/assets/project-todo.png";
 import projectWeather from "@/assets/project-weather.png";
+import { supabase } from "@/integrations/supabase/client";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -316,11 +318,30 @@ function Projects() {
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSending(true);
+    setError(null);
+    const { error: insertError } = await supabase
+      .from("contact_messages")
+      .insert({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        message: form.message.trim(),
+      });
+    setSending(false);
+    if (insertError) {
+      setError("Something went wrong. Please try again or email me directly.");
+      return;
+    }
+    setForm({ name: "", email: "", message: "" });
     setSubmitted(true);
   };
+
 
   return (
     <section
@@ -434,6 +455,9 @@ function Contact() {
               id="name"
               type="text"
               required
+              maxLength={100}
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
               className="h-10 w-full rounded-lg bg-zinc-950 px-4 text-sm text-zinc-200 ring-1 ring-white/10 transition-all focus:outline-none focus:ring-brand"
             />
           </div>
@@ -448,6 +472,9 @@ function Contact() {
               id="email"
               type="email"
               required
+              maxLength={200}
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="h-10 w-full rounded-lg bg-zinc-950 px-4 text-sm text-zinc-200 ring-1 ring-white/10 transition-all focus:outline-none focus:ring-brand"
             />
           </div>
@@ -462,20 +489,28 @@ function Contact() {
               id="message"
               rows={4}
               required
+              maxLength={4000}
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
               className="w-full resize-none rounded-lg bg-zinc-950 px-4 py-3 text-sm text-zinc-200 ring-1 ring-white/10 transition-all focus:outline-none focus:ring-brand"
             />
           </div>
           <button
             type="submit"
-            className="mt-2 h-10 w-full rounded-lg bg-brand text-sm font-medium text-surface ring-brand transition-transform hover:-translate-y-px active:translate-y-0"
+            disabled={sending}
+            className="mt-2 h-10 w-full rounded-lg bg-brand text-sm font-medium text-surface ring-brand transition-transform hover:-translate-y-px active:translate-y-0 disabled:opacity-60"
           >
-            Send Message
+            {sending ? "Sending…" : "Send Message"}
           </button>
           {submitted && (
             <p className="text-center text-sm text-brand">
               Thanks for your message! I'll get back to you soon.
             </p>
           )}
+          {error && (
+            <p className="text-center text-sm text-red-400">{error}</p>
+          )}
+
         </form>
       </div>
     </section>
