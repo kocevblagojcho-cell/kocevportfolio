@@ -3,6 +3,8 @@ import { useState, type FormEvent } from "react";
 import projectEcommerce from "@/assets/project-ecommerce.png";
 import projectTodo from "@/assets/project-todo.png";
 import projectWeather from "@/assets/project-weather.png";
+import { supabase } from "@/integrations/supabase/client";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
