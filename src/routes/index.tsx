@@ -8,16 +8,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Ana Petrović — Junior Frontend Developer",
+        title: "Blagojcho Kocev — Junior Frontend Developer",
       },
       {
         name: "description",
         content:
-          "Portfolio of Ana Petrović, a junior frontend developer building responsive, user-friendly web applications with React, JavaScript, HTML and CSS.",
+          "Portfolio of Blagojcho Kocev, a junior frontend developer building responsive, user-friendly web applications with React, JavaScript, HTML and CSS.",
       },
       {
         property: "og:title",
-        content: "Ana Petrović — Junior Frontend Developer",
+        content: "Blagojcho Kocev — Junior Frontend Developer",
       },
       {
         property: "og:description",
@@ -89,7 +89,7 @@ function Navigation() {
           href="#home"
           className="font-mono text-lg tracking-tighter text-zinc-100"
         >
-          <span className="text-brand">A</span>P
+          <span className="text-brand">B</span>K
         </a>
 
         <div className="hidden items-center gap-8 text-sm font-medium md:flex">
@@ -153,9 +153,9 @@ function Hero() {
             Available for work
           </span>
         </div>
-        <h1 className="mb-6 text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-100 md:text-6xl">
-          Ana Petrović
-        </h1>
+          <h1 className="mb-6 text-balance text-4xl font-semibold leading-tight tracking-tight text-zinc-100 md:text-6xl">
+            Blagojcho Kocev
+          </h1>
         <p className="mb-10 max-w-[40ch] text-pretty text-lg text-zinc-400">
           Junior Frontend Developer building responsive, user-friendly web
           applications with React, JavaScript, HTML and CSS.
@@ -466,7 +466,7 @@ function Footer() {
     <footer className="border-t border-zinc-900 bg-zinc-950 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <p className="font-mono text-xs italic text-zinc-500">
-          © 2026 Ana Petrović. Built with React.
+          © 2026 Blagojcho Kocev. Built with React.
         </p>
         <div className="flex items-center gap-6 font-mono text-[10px] uppercase tracking-widest text-zinc-600">
           <span>Portfolio v1.0</span>
