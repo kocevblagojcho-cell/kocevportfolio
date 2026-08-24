@@ -316,11 +316,30 @@ function Projects() {
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSending(true);
+    setError(null);
+    const { error: insertError } = await supabase
+      .from("contact_messages")
+      .insert({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        message: form.message.trim(),
+      });
+    setSending(false);
+    if (insertError) {
+      setError("Something went wrong. Please try again or email me directly.");
+      return;
+    }
+    setForm({ name: "", email: "", message: "" });
     setSubmitted(true);
   };
+
 
   return (
     <section
