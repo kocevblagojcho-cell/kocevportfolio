@@ -7,7 +7,6 @@
 @theme {
   --color-brand: oklch(0.72 0.13 180);
   --color-surface: oklch(0.141 0.005 285.8);
-  --color-card: oklch(0.21 0.006 285.8);
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "Geist Mono", monospace;
 }
