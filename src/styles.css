@@ -4,6 +4,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-brand: oklch(0.72 0.13 180);
+  --color-surface: oklch(0.141 0.005 285.8);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", monospace;
+}
+
 /*
  * Design system definition.
  *
@@ -138,7 +145,12 @@
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: oklch(0.141 0.005 285.8);
+    color: oklch(0.875 0.005 286.4);
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
