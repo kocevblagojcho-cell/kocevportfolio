@@ -1,101 +1,127 @@
-# Kocev's Modern Portfolio
+# Kocev Portfolio
 
-Create a modern personal portfolio website for a junior frontend developer.
-The website should be in English and built as a single-page React application.
-Use this example profile:
-Name: Ana Petrović
-Title: Junior Frontend Developer
-Short bio:
-I am a junior frontend developer focused on building responsive, user-friendly web applications using React, JavaScript, HTML and CSS. I enjoy turning ideas into clean and functional interfaces.
+A modern and professional personal portfolio website built with TypeScript and modern web technologies. Designed to showcase projects, skills, and experience.
 
-The website should contain:
- Header / Navigation - Logo with initials: AP
-- Navigation links: Home, About, Skills, Projects, Contact
-- Sticky navigation
-- Mobile menu
+## 🎯 Purpose
 
- Hero Section - Full name: Ana Petrović
-- Title: Junior Frontend Developer
-- Short professional intro
-- Two buttons:
-- View Projects
-- Contact Me
+This portfolio website is designed to:
+- Showcase my web development projects
+- Display my technical skills and expertise
+- Provide information about my background and experience
+- Serve as a professional online presence
 
- About Me Section Write a short paragraph about a beginner frontend developer who is learning React, improving JavaScript skills and building practical projects.
+## 🛠️ Technologies Used
 
- Skills Section Show skills as modern cards or badges:
-- HTML
-- CSS
-- JavaScript
-- React
-- Git
-- GitHub
-- Responsive Design
-- Basic API Integration
+- **TypeScript** (96.3%) - Main language for type-safe and scalable code
+- **CSS** (3%) - Styling and responsive design
+- **JavaScript** (0.7%) - Interactive elements and functionality
 
- Projects Section Create 3 project cards:
+## 📋 Features
 
+- ✨ Clean and professional design
+- 📱 Responsive layout for all devices (desktop, tablet, mobile)
+- 📁 Project showcase section
+- 🎓 Skills and expertise display
+- 📞 Contact information
+- 🌟 Modern UI with smooth animations
+- 🎨 Professional color scheme and typography
 
-Project 1:
-Name: eCommerce Product Page
-Description: A responsive product details page with product image, price, description and Add to Cart button.
-Technologies: React, CSS, JavaScript
+## 🚀 Getting Started
 
-Project 2:
-Name: To Do App
-Description: A simple task management app where users can add, complete and delete tasks.
-Technologies: React, useState, CSS
+### Prerequisites
+- Node.js and npm installed on your machine
 
+### Installation
 
-Project 3:
-Name: Weather Dashboard
-Description: A small dashboard that shows weather information using sample API data.
-Technologies: JavaScript, API, Responsive Design
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd kocevportfolio
+```
 
+2. Install dependencies:
+```bash
+npm install
+```
 
-Each project card should include:
-- project title
-- short description
-- technologies
-- View Project button
-
- Contact Section Include:
-- email: kocevblagojcho@gmail.com
-- GitHub link: https://github.com/kocevblagojcho
-- LinkedIn link: https://www.linkedin.com/in/blagojchokocev
-- simple contact form with name, email and message fields
-
- Design Requirements - Modern clean UI
-- Dark mode design
-- Soft gradients
-- Cards with rounded corners
-- Smooth hover effects
-- Responsive layout for desktop, tablet and mobile
-- Professional look suitable for a junior developer portfolio
-
- Technical Requirements - Use React components
-- Keep everything on one page
-- Use sample data only
-- Do not use backend
-- Make the code clean and easy to understand
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/504da707-b299-410e-ac0f-6364c62090e2).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+3. Start the development server:
+```bash
 npm run dev
 ```
+
+4. Open your browser and navigate to the local development URL
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## 📁 Project Structure
+
+```
+kocevportfolio/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── styles/
+│   ├── App.tsx
+│   └── main.tsx
+├── public/
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+## 📚 Projects Included
+
+This portfolio showcases various web development projects demonstrating skills in:
+- Frontend development
+- Responsive design
+- User interface creation
+- Modern web technologies
+
+## 💡 Key Sections
+
+1. **Home/Hero Section** - Introduction and call-to-action
+2. **About Section** - Background and professional info
+3. **Skills Section** - Technical skills and expertise
+4. **Projects Section** - Showcase of completed work
+5. **Contact Section** - Get in touch information
+
+## 🎨 Design Features
+
+- Modern and clean UI
+- Fully responsive design
+- Smooth animations and transitions
+- Professional typography
+- Accessible color contrast
+- Mobile-first approach
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 🔒 Privacy & Security
+
+This portfolio does not collect any personal data. All contact information is displayed for reference purposes.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👨‍💻 Author
+
+**Blagojcho Kocev**
+- GitHub: [@kocevblagojcho-cell](https://github.com/kocevblagojcho-cell)
+- Email: kocevblagojcho@gmail.com
+
+---
+
+**Last Updated**: August 24, 2026  
+**Version**: 1.0.0
+
