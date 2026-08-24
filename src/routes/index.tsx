@@ -396,7 +396,28 @@ function Contact() {
               </a>
             </div>
           </div>
+          <a
+            href="/Blagojcho-Kocev-Resume.pdf"
+            download
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-brand px-6 text-sm font-medium text-surface ring-brand transition-transform hover:-translate-y-px active:translate-y-0"
+          >
+            <svg
+              className="size-4 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
+            </svg>
+            Download Resume
+          </a>
         </div>
+
 
         <form
           onSubmit={handleSubmit}
